@@ -1,0 +1,33 @@
+﻿@model Core.Models.ErrorViewModel
+
+@{
+    ViewData["Title"] = "Error Occurred";
+}
+
+<div class="container text-center mt-5">
+    <h1 class="text-danger mb-3"> Error Occurred</h1>
+    <p class="lead text-muted">An unexpected error has been logged.</p>
+
+    <div class="card shadow-sm mt-4 mx-auto" style="max-width: 500px;">
+        <div class="card-body">
+            <p><strong>Request ID:</strong> <code>@Model?.RequestId</code></p>
+            @if (!string.IsNullOrEmpty(Model?.Message))
+            {
+                <p><strong>Error Message:</strong> @Model.Message</p>
+            }
+        </div>
+    </div>
+
+    <div class="mt-4">
+        <a asp-controller="Home" asp-action="Index" class="btn btn-primary me-2">
+            ⬅️ Back to Home
+        </a>
+        <a asp-controller="Todo" asp-action="Index" class="btn btn-success">
+             Go to Todo List
+        </a>
+    </div>
+
+    <footer class="mt-5 text-muted">
+        <small>© @DateTime.Now.Year - ToDo App</small>
+    </footer>
+</div>

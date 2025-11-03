@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center mt-5">
+    <h1 class="display-4 text-primary">Welcome to the ToDo App!</h1>
+    <p class="lead">Manage your daily tasks easily and stay productive.</p>
+
+    <div class="mt-4">
+        <a asp-controller="Todo" asp-action="Index" class="btn btn-success btn-lg me-2">
+            Go to ToDo List
+        </a>
+        <a asp-action="TestError" class="btn btn-danger btn-lg me-2">
+            Trigger Test Error
+        </a>
+        <a asp-action="Privacy" class="btn btn-secondary btn-lg">
+            Privacy Page
+        </a>
+    </div>
+</div>
